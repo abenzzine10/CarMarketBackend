@@ -1,9 +1,13 @@
 package com.projects.carmarket.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Owner {
 
     @Id
@@ -16,10 +20,10 @@ public class Owner {
     // password
     @Column(nullable = false, unique = true)
     private String email;
-    // verified
     //private String address;
 
     @OneToMany(cascade = CascadeType.ALL, mappedBy = "owner")
+    @JsonIgnore
     private List<Car> cars;
 
     public Owner() {};

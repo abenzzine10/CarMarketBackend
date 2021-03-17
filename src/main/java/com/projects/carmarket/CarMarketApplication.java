@@ -23,6 +23,7 @@ public class CarMarketApplication {
         SpringApplication.run(CarMarketApplication.class, args);
     }
 
+    /* Adding initial entities to h2 database for testing purposes */
     @Bean
     CommandLineRunner runner() {
         return args -> {
