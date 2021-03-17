@@ -35,10 +35,10 @@ public class CarMarketApplication {
             ownerRepository.save(owner2);
             ownerRepository.save(owner3);
             ownerRepository.save(owner4);
-            carRepository.save(new Car("Hyundai", "Elantra", 2018, 15000, false, owner1));
-            carRepository.save(new Car("Dacia", "Duster", 2017, 20000, false, owner2));
-            carRepository.save(new Car("Opel", "Astra", 2020, 24000, false, owner4));
-            carRepository.save(new Car("Honda", "CRV", 2016, 30000, false, owner3));
+            carRepository.save(new Car("Hyundai", "Elantra", 2018, 15000, owner1));
+            carRepository.save(new Car("Dacia", "Duster", 2017, 20000, owner2));
+            carRepository.save(new Car("Opel", "Astra", 2020, 24000, owner4));
+            carRepository.save(new Car("Honda", "CRV", 2016, 30000, owner3));
         };
     }
 }

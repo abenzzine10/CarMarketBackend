@@ -21,18 +21,17 @@ public class Car {
     @JoinColumn(name = "owner")
     private Owner owner;
 
-    @Column(nullable = false)
+    @Column(nullable = false, columnDefinition = "boolean default false")
     private boolean sold;
     private int soldFor;
 
     public Car() {}
 
-    public Car(String brand, String model, int year, int price, boolean sold, Owner owner) {
+    public Car(String brand, String model, int year, int price, Owner owner) {
         this.brand = brand;
         this.model = model;
         this.year = year;
         this.price = price;
-        this.sold = sold;
         this.owner = owner;
     }
 
